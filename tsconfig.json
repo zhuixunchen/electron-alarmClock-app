@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react", // 配置兼容使用react jsx写法
+    "esModuleInterop": true, // 允许按照es6模块规范导入commonjs模块,解决模块编译不一致问题，可参考:https://zhuanlan.zhihu.com/p/148081795
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true, // 默认导入，import React from 'react'时不会报错
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "skipLibCheck": true // 1.tsc编译会跳过node_modules依赖类型检查报错，配置"exclude"无效，2.或者配置使用ts-loader，3.或者配置babel
+  },
+  "include": [
+    "src/**/*"
+  ],
+  // "exclude": ["node_modules", "dist"]
+}
